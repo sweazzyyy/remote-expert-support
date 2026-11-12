@@ -1,1 +1,1 @@
-git remote add origin https://github.com/sweazzyyy/remote-expert-support.git
+https://github.com/sweazzyyy/remote-expert-support.git

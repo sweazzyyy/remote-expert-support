@@ -19,6 +19,12 @@ remote_expert_support/
 ├── vcs/
 │   ├── repo_url.txt
 │   └── git_log.txt
+├── models/                       # Исходники draw.io + PNG (BPMN, ER 3НФ, блок-схемы)
+├── docs/
+│   └── report_section6.md        # Текст раздела 6 отчёта КТ2
+├── src/
+│   ├── main.py                   # Процедурный модуль КТ2 (python src/main.py)
+│   └── README.md
 └── app/
     ├── __init__.py
     ├── main.py                   # Точка входа приложения
@@ -55,4 +61,3 @@ remote_expert_support/
 4. **Документация API:**
    После запуска перейдите в браузере по адресу: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-😊
