@@ -29,3 +29,8 @@ Thumbs.db
 *.docx
 
 *docs/
+# Java build output
+*.class
+out/
+target/
+build/
