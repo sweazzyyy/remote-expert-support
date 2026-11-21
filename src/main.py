@@ -15,7 +15,6 @@
   6. generate_consultation_protocol()  — «Оформить протокол заключения»
 """
 import datetime
-import random
 
 
 def get_priority_weight(priority_level):
@@ -146,7 +145,8 @@ def setup_webrtc_session(session_id, assignment):
     Сессия ссылается на назначение (FK assignment_id), через него
     однозначно определяются инцидент и эксперт.
     """
-    room_id = f"room_webrtc_{assignment['incident_id']}_{random.randint(1000, 9999)}"
+    # room_id детерминирован (инцидент + сессия), чтобы вывод можно было сверить с ООП-версией
+    room_id = f"room_webrtc_{assignment['incident_id']}_{session_id}"
     return {
         "session_id": session_id,
         "assignment_id": assignment["assignment_id"],   # FK -> EXPERT_ASSIGNMENT
