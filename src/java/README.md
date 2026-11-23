@@ -76,5 +76,3 @@ diff <(PYTHONIOENCODING=utf-8 python src/main.py | norm) \
 | `expertsupport.model.annotation` | `Annotation` (абстр.), `ArrowAnnotation`, `RectAnnotation`, `LineAnnotation` | сущность ANNOTATION, `process_ar_annotation()` |
 | `expertsupport.algo` | `IncidentQueue` (Алгоритм 2), `ExpertSelector` (Алгоритм 1), `SkillMatcher` + `ListScanSkillMatcher`, `HashSetSkillMatcher`, `MatchResult` | `prioritize_incidents_queue()`, `assign_best_expert()` |
 | `expertsupport.app` | `Main` | `main()` |
-
-Тестов нет. Корректность проверяется сверкой вывода с Python-версией (см. выше).
