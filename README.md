@@ -9,6 +9,7 @@
 * **Pydantic v2** — валидация данных и схем
 * **WebSockets / WebRTC (aiortc)** — передача видеопотока и сигналов AR-аннотаций в реальном времени
 * **Uvicorn** — ASGI сервер
+* **Java 21 (JDK 21, Eclipse Temurin)** — ООП-версия процедурного модуля (КТ3), сборка `javac` без внешних библиотек; подходит JDK 17+
 
 ## Структура проекта
 ```
@@ -19,12 +20,15 @@ remote_expert_support/
 ├── vcs/
 │   ├── repo_url.txt
 │   └── git_log.txt
-├── models/                       # Исходники draw.io + PNG (BPMN, ER 3НФ, блок-схемы)
+├── models/                       # Исходники draw.io + PNG (BPMN, ER 3НФ, блок-схемы, диаграмма классов UML)
 ├── docs/
 │   └── report_section6.md        # Текст раздела 6 отчёта КТ2
 ├── src/
 │   ├── main.py                   # Процедурный модуль КТ2 (python src/main.py)
-│   └── README.md
+│   ├── README.md
+│   └── java/                     # ООП-версия на Java 21 (КТ3)
+│       ├── README.md             # Сборка и запуск, сверка с процедурной версией
+│       └── expertsupport/        # Пакеты model, model.annotation, algo, app
 └── app/
     ├── __init__.py
     ├── main.py                   # Точка входа приложения
@@ -60,4 +64,15 @@ remote_expert_support/
 
 4. **Документация API:**
    После запуска перейдите в браузере по адресу: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+## ООП-версия на Java (КТ3)
+
+Требуется **JDK 21** (проверено на Eclipse Temurin 21.0.12, подойдёт JDK 17+). Из папки `src/java`:
+
+```bash
+javac -encoding UTF-8 -d out $(find expertsupport -name "*.java")
+java -Dstdout.encoding=UTF-8 -cp out expertsupport.app.Main
+```
+
+Если в `PATH` первым стоит `java` из Java 8, вызывайте `java` и `javac` из каталога JDK 21 явно. Подробности и команды для PowerShell — в [src/java/README.md](src/java/README.md).
 
