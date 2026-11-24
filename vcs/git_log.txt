@@ -1,3 +1,14 @@
+bb144de 2026-11-24 19:18:47 +0300 sweazzyyy docs: взаимное рецензирование кода КТ3 (review/review.md)
+c8fa96b 2026-11-24 19:12:55 +0300 sweazzyyy fix: повторяющиеся навыки инцидента не учитываются дважды (review #4)
+0b474f8 2026-11-24 19:12:45 +0300 sweazzyyy fix: в приоритизацию очереди попадают только инциденты в статусе CREATED (review #3)
+6f0001c 2026-11-24 19:12:34 +0300 sweazzyyy fix: не более одного WebRTC-сеанса на назначение, поле session на диаграмме классов (review #2)
+b9a08d6 2026-11-24 19:11:37 +0300 sweazzyyy fix: запрет повторного назначения эксперта на назначенный или закрытый инцидент (review #1)
+afa7b20 2026-11-23 22:40:13 +0300 sweazzyyy docs(java): remove tests note from README
+26d4cae 2026-11-23 22:27:47 +0300 sweazzyyy docs: add Java 21 version and KT3 run instructions to README
+c6bdf13 2026-11-22 00:29:41 +0300 sweazzyyy feat(models): UML class diagram of the Java OOP version
+132380e 2026-11-22 00:25:49 +0300 sweazzyyy feat(java): OOP version of the procedural module (KT3)
+47fdbe0 2026-11-22 00:23:31 +0300 sweazzyyy fix(src): deterministic room_id in setup_webrtc_session to compare with OOP version
+07e1500 2026-11-19 13:07:31 +0300 sweazzyyy docs: save git_log.txt in UTF-8
 da5cf1c 2026-11-19 13:03:18 +0300 sweazzyyy docs: update vcs/git_log.txt
 fee528c 2026-11-19 13:02:40 +0300 sweazzyyy docs: add translation of source [10] and verified source list
 e10a57b 2026-11-12 19:44:52 +0300 sweazzyyy docs: regenerate vcs/git_log.txt in UTF-8
