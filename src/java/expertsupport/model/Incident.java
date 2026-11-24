@@ -3,6 +3,7 @@ package expertsupport.model;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedHashSet;
 import java.util.List;
 
 /** Сущность INCIDENT; требуемые навыки — связь INCIDENT_SKILL. */
@@ -29,7 +30,9 @@ public class Incident {
         this.title = title;
         this.description = description;
         this.category = category;
-        this.requiredSkills = new ArrayList<>(requiredSkills);
+        // повторяющиеся навыки отбрасываются с сохранением порядка:
+        // в модели данных пара (incident_id, skill_id) в INCIDENT_SKILL уникальна
+        this.requiredSkills = new ArrayList<>(new LinkedHashSet<>(requiredSkills));
         this.priority = priority;
         this.createdAt = LocalDateTime.now();
         this.status = IncidentStatus.CREATED;
