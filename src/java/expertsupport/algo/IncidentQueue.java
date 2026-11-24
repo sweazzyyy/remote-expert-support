@@ -1,6 +1,7 @@
 package expertsupport.algo;
 
 import expertsupport.model.Incident;
+import expertsupport.model.IncidentStatus;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,9 +24,19 @@ public class IncidentQueue {
         return Collections.unmodifiableList(incidents);
     }
 
-    /** Новый список, отсортированный по убыванию веса; исходный порядок не меняется. */
+    /**
+     * Новый список инцидентов, ожидающих назначения эксперта (статус CREATED),
+     * отсортированный по убыванию веса; исходный порядок не меняется.
+     * Назначенные и закрытые инциденты в результат не попадают.
+     */
     public List<Incident> prioritize() {
-        return mergeSort(new ArrayList<>(incidents));
+        List<Incident> waiting = new ArrayList<>();
+        for (Incident incident : incidents) {
+            if (incident.getStatus() == IncidentStatus.CREATED) {
+                waiting.add(incident);
+            }
+        }
+        return mergeSort(waiting);
     }
 
     private static List<Incident> mergeSort(List<Incident> queue) {
