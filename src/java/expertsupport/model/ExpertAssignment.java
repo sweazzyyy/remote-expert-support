@@ -9,6 +9,7 @@ public class ExpertAssignment {
     private final Expert expert;
     private final double score;
     private final LocalDateTime assignedAt;
+    private WebRtcSession session;
 
     ExpertAssignment(int id, Incident incident, Expert expert, double score) {
         this.id = id;
@@ -21,9 +22,14 @@ public class ExpertAssignment {
     /**
      * Операция 4 «Установить P2P WebRTC-сессию».
      * В процедурной версии — функция setup_webrtc_session().
+     * По одному назначению открывается не более одного сеанса (кратность 0..1).
      */
     public WebRtcSession openSession(int sessionId) {
-        return new WebRtcSession(sessionId, this);
+        if (session != null) {
+            throw new IllegalStateException("По назначению " + id + " уже открыт сеанс " + session.getId());
+        }
+        session = new WebRtcSession(sessionId, this);
+        return session;
     }
 
     public int getId() {
@@ -44,5 +50,10 @@ public class ExpertAssignment {
 
     public LocalDateTime getAssignedAt() {
         return assignedAt;
+    }
+
+    /** Сеанс по назначению или null, если он ещё не открыт. */
+    public WebRtcSession getSession() {
+        return session;
     }
 }

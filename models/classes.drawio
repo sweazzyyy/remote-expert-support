@@ -215,7 +215,7 @@
           <mxGeometry y="120" width="260" height="18" as="geometry" />
         </mxCell>
         <mxCell id="ExpertAssignment" value="ExpertAssignment" vertex="1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#ffffff;fontSize=12;">
-          <mxGeometry x="560" y="930" width="340" height="146" as="geometry" />
+          <mxGeometry x="560" y="930" width="340" height="164" as="geometry" />
         </mxCell>
         <mxCell id="ExpertAssignment_a0" value="- id: int" vertex="1" parent="ExpertAssignment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=11;fontStyle=0;">
           <mxGeometry y="26" width="340" height="18" as="geometry" />
@@ -232,11 +232,14 @@
         <mxCell id="ExpertAssignment_a4" value="- assignedAt: LocalDateTime" vertex="1" parent="ExpertAssignment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=11;fontStyle=0;">
           <mxGeometry y="98" width="340" height="18" as="geometry" />
         </mxCell>
+        <mxCell id="ExpertAssignment_a5" value="- session: WebRtcSession" vertex="1" parent="ExpertAssignment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=11;fontStyle=0;">
+          <mxGeometry y="116" width="340" height="18" as="geometry" />
+        </mxCell>
         <mxCell id="ExpertAssignment_sep" value="" vertex="1" parent="ExpertAssignment" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;">
-          <mxGeometry y="116" width="340" height="8" as="geometry" />
+          <mxGeometry y="134" width="340" height="8" as="geometry" />
         </mxCell>
         <mxCell id="ExpertAssignment_m0" value="+ openSession(sessionId: int): WebRtcSession" vertex="1" parent="ExpertAssignment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=11;fontStyle=0;">
-          <mxGeometry y="124" width="340" height="18" as="geometry" />
+          <mxGeometry y="142" width="340" height="18" as="geometry" />
         </mxCell>
         <mxCell id="WebRtcSession" value="WebRtcSession" vertex="1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#ffffff;fontSize=12;">
           <mxGeometry x="480" y="1130" width="500" height="200" as="geometry" />
@@ -661,7 +664,7 @@
         <mxCell id="e14" value="" style="edgeStyle=none;html=1;rounded=0;endArrow=open;endFill=0;endSize=10;exitX=0.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.2143;entryY=1.0000;entryDx=0;entryDy=0;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="ExpertAssignment" target="Expert">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="30" y="1003.0" />
+              <mxPoint x="30" y="1012.0" />
               <mxPoint x="30" y="505" />
               <mxPoint x="680" y="505" />
             </Array>
@@ -677,17 +680,17 @@
             <mxPoint x="8" y="12" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e15" value="" style="edgeStyle=none;html=1;rounded=0;endArrow=open;endFill=0;endSize=10;exitX=0.5000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="WebRtcSession" target="ExpertAssignment">
+        <mxCell id="e15" value="" style="edgeStyle=none;html=1;rounded=0;endArrow=none;exitX=0.5000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="WebRtcSession" target="ExpertAssignment">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e15_sm" value="0..1" vertex="1" connectable="0" parent="e15" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=middle;fontSize=11;labelBackgroundColor=none;">
+        <mxCell id="e15_sm" value="session 0..1" vertex="1" connectable="0" parent="e15" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=middle;fontSize=11;labelBackgroundColor=none;">
           <mxGeometry x="-1" relative="1" as="geometry">
-            <mxPoint x="8" y="-14" as="offset" />
+            <mxPoint x="-92" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e15_tm" value="assignment 1" vertex="1" connectable="0" parent="e15" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=middle;fontSize=11;labelBackgroundColor=none;">
           <mxGeometry x="1" relative="1" as="geometry">
-            <mxPoint x="8" y="14" as="offset" />
+            <mxPoint x="8" y="12" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e16" value="" style="edgeStyle=none;html=1;rounded=0;endArrow=none;exitX=1.0000;exitY=0.4750;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="WebRtcSession" target="Protocol">
