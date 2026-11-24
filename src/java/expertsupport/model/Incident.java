@@ -38,8 +38,13 @@ public class Incident {
     /**
      * Фиксация результата подбора эксперта (EXPERT_ASSIGNMENT).
      * В процедурной версии — функция create_assignment().
+     * Назначить эксперта можно только на новый инцидент (статус CREATED).
      */
     public ExpertAssignment assignTo(int assignmentId, Expert expert, double score) {
+        if (status != IncidentStatus.CREATED) {
+            throw new IllegalStateException("Инцидент " + id + " уже в статусе " + status
+                    + ", повторное назначение эксперта невозможно");
+        }
         status = IncidentStatus.ASSIGNED;
         return new ExpertAssignment(assignmentId, this, expert, score);
     }
