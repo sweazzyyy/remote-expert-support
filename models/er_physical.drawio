@@ -1,0 +1,266 @@
+<mxfile host="app.diagrams.net" agent="model-generator" version="24.7.17">
+  <diagram id="ER_physical" name="ER_physical">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1540" pageHeight="1130" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Физическая модель данных — PostgreSQL 18 (db/schema.sql)" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="12" width="1400" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="user_skill" value="user_skill" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="300" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="user_skill_a0" value="PK, FK  user_id: bigint" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="user_skill">
+          <mxGeometry y="28" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="user_skill_a1" value="PK, FK  skill_id: bigint" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="user_skill">
+          <mxGeometry y="50" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="skill" value="skill" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="430" y="80" width="300" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="skill_a0" value="PK  skill_id: bigint IDENTITY" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="skill">
+          <mxGeometry y="28" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="skill_a1" value="name: varchar(60) NN UQ" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="skill">
+          <mxGeometry y="50" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="incident_skill" value="incident_skill" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="820" y="80" width="300" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="incident_skill_a0" value="PK, FK  incident_id: bigint" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="incident_skill">
+          <mxGeometry y="28" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="incident_skill_a1" value="PK, FK  skill_id: bigint" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="incident_skill">
+          <mxGeometry y="50" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="app_user" value="app_user" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="app_user_a0" value="PK  user_id: bigint IDENTITY" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="app_user">
+          <mxGeometry y="28" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="app_user_a1" value="full_name: varchar(100) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="app_user">
+          <mxGeometry y="50" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="app_user_a2" value="email: varchar(100) NN UQ" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="app_user">
+          <mxGeometry y="72" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="app_user_a3" value="role: varchar(20) NN CHECK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="app_user">
+          <mxGeometry y="94" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="app_user_a4" value="rating: numeric(3,2) CHECK 0..5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="app_user">
+          <mxGeometry y="116" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="app_user_a5" value="is_active: boolean NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="app_user">
+          <mxGeometry y="138" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="incident" value="incident" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="820" y="290" width="300" height="226" as="geometry" />
+        </mxCell>
+        <mxCell id="incident_a0" value="PK  incident_id: bigint IDENTITY" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="incident">
+          <mxGeometry y="28" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="incident_a1" value="FK  equipment_id: bigint NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=2;" vertex="1" parent="incident">
+          <mxGeometry y="50" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="incident_a2" value="FK  engineer_id: bigint NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=2;" vertex="1" parent="incident">
+          <mxGeometry y="72" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="incident_a3" value="FK  priority_level: varchar(10) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=2;" vertex="1" parent="incident">
+          <mxGeometry y="94" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="incident_a4" value="title: varchar(200) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="incident">
+          <mxGeometry y="116" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="incident_a5" value="description: text NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="incident">
+          <mxGeometry y="138" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="incident_a6" value="category: varchar(60) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="incident">
+          <mxGeometry y="160" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="incident_a7" value="status: varchar(20) NN CHECK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="incident">
+          <mxGeometry y="182" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="incident_a8" value="created_at: timestamp NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="incident">
+          <mxGeometry y="204" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="priority" value="priority" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="290" width="300" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="priority_a0" value="PK  priority_level: varchar(10) CHECK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="priority">
+          <mxGeometry y="28" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="priority_a1" value="weight: smallint NN UQ CHECK &gt; 0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="priority">
+          <mxGeometry y="50" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="equipment" value="equipment" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="430" width="300" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="equipment_a0" value="PK  equipment_id: bigint IDENTITY" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="equipment">
+          <mxGeometry y="28" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="equipment_a1" value="serial_num: varchar(40) NN UQ" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="equipment">
+          <mxGeometry y="50" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="equipment_a2" value="model: varchar(100) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="equipment">
+          <mxGeometry y="72" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="equipment_a3" value="location: varchar(100) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="equipment">
+          <mxGeometry y="94" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="expert_assignment" value="expert_assignment" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="430" y="660" width="300" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="expert_assignment_a0" value="PK  assignment_id: bigint IDENTITY" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="expert_assignment">
+          <mxGeometry y="28" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="expert_assignment_a1" value="FK, UQ  incident_id: bigint NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=2;" vertex="1" parent="expert_assignment">
+          <mxGeometry y="50" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="expert_assignment_a2" value="FK  expert_id: bigint NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=2;" vertex="1" parent="expert_assignment">
+          <mxGeometry y="72" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="expert_assignment_a3" value="score: numeric(7,2) NN CHECK &gt;= 100" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="expert_assignment">
+          <mxGeometry y="94" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="expert_assignment_a4" value="assigned_at: timestamp NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="expert_assignment">
+          <mxGeometry y="116" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="webrtc_session" value="webrtc_session" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="820" y="660" width="300" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="webrtc_session_a0" value="PK  session_id: bigint IDENTITY" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="webrtc_session">
+          <mxGeometry y="28" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="webrtc_session_a1" value="FK, UQ  assignment_id: bigint NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=2;" vertex="1" parent="webrtc_session">
+          <mxGeometry y="50" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="webrtc_session_a2" value="room_id: varchar(64) NN UQ" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="webrtc_session">
+          <mxGeometry y="72" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="webrtc_session_a3" value="quality: varchar(30) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="webrtc_session">
+          <mxGeometry y="94" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="webrtc_session_a4" value="established_at: timestamp NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="webrtc_session">
+          <mxGeometry y="116" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="annotation" value="annotation" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="660" width="300" height="226" as="geometry" />
+        </mxCell>
+        <mxCell id="annotation_a0" value="PK  annotation_id: bigint IDENTITY" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="annotation">
+          <mxGeometry y="28" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="annotation_a1" value="FK  session_id: bigint NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=2;" vertex="1" parent="annotation">
+          <mxGeometry y="50" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="annotation_a2" value="tool_type: varchar(10) NN CHECK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="annotation">
+          <mxGeometry y="72" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="annotation_a3" value="x1: numeric(5,4) NN CHECK 0..1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="annotation">
+          <mxGeometry y="94" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="annotation_a4" value="y1: numeric(5,4) NN CHECK 0..1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="annotation">
+          <mxGeometry y="116" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="annotation_a5" value="x2: numeric(5,4) NN CHECK 0..1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="annotation">
+          <mxGeometry y="138" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="annotation_a6" value="y2: numeric(5,4) NN CHECK 0..1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="annotation">
+          <mxGeometry y="160" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="annotation_a7" value="color: char(7) NN CHECK #RRGGBB" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="annotation">
+          <mxGeometry y="182" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="annotation_a8" value="created_at: timestamp NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="annotation">
+          <mxGeometry y="204" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="protocol" value="protocol" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="820" y="960" width="300" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="protocol_a0" value="PK  protocol_id: bigint IDENTITY" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=5;" vertex="1" parent="protocol">
+          <mxGeometry y="28" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="protocol_a1" value="FK, UQ  session_id: bigint NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=2;" vertex="1" parent="protocol">
+          <mxGeometry y="50" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="protocol_a2" value="expert_notes: text NN CHECK не пусто" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="protocol">
+          <mxGeometry y="72" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="protocol_a3" value="closed_at: timestamp NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontStyle=0;" vertex="1" parent="protocol">
+          <mxGeometry y="94" width="300" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="PK — первичный ключ, FK — внешний ключ, UQ — UNIQUE, NN — NOT NULL, IDENTITY — автонумерация.&lt;br&gt;ON DELETE: CASCADE — user_skill, incident_skill (по владельцу), annotation (по сеансу);&lt;br&gt;остальные внешние ключи — RESTRICT.&lt;br&gt;Индексы, кроме PK/UQ: incident(status, equipment_id, engineer_id),&lt;br&gt;user_skill(skill_id), incident_skill(skill_id), expert_assignment(expert_id),&lt;br&gt;annotation(session_id).&lt;br&gt;CHECK: app_user — рейтинг только у эксперта; списки role, status, tool_type, priority_level." style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="960" width="700" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" value="user_id" style="edgeStyle=none;html=1;rounded=0;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=12;endSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" edge="1" parent="1" source="app_user" target="user_skill">
+          <mxGeometry relative="1" as="geometry" x="0">
+            <mxPoint x="0" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" value="skill_id" style="edgeStyle=none;html=1;rounded=0;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=12;endSize=12;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" edge="1" parent="1" source="skill" target="user_skill">
+          <mxGeometry relative="1" as="geometry" x="0">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="skill_id" style="edgeStyle=none;html=1;rounded=0;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=12;endSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" edge="1" parent="1" source="skill" target="incident_skill">
+          <mxGeometry relative="1" as="geometry" x="0">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="incident_id" style="edgeStyle=none;html=1;rounded=0;startArrow=ERmandOne;endArrow=ERoneToMany;startFill=0;endFill=0;startSize=12;endSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" edge="1" parent="1" source="incident" target="incident_skill">
+          <mxGeometry relative="1" as="geometry" x="0">
+            <mxPoint x="0" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="engineer_id" style="edgeStyle=none;html=1;rounded=0;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=12;endSize=12;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.24778761061946902;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" edge="1" parent="1" source="app_user" target="incident">
+          <mxGeometry relative="1" as="geometry" x="0">
+            <mxPoint x="0" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="priority_level" style="edgeStyle=none;html=1;rounded=0;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=12;endSize=12;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.1592920353982301;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" edge="1" parent="1" source="priority" target="incident">
+          <mxGeometry relative="1" as="geometry" x="0">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="equipment_id" style="edgeStyle=none;html=1;rounded=0;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=12;endSize=12;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.8761061946902655;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" edge="1" parent="1" source="equipment" target="incident">
+          <mxGeometry relative="1" as="geometry" x="0">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="expert_id" style="edgeStyle=none;html=1;rounded=0;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=12;endSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" edge="1" parent="1" source="app_user" target="expert_assignment">
+          <mxGeometry relative="1" as="geometry" x="-1">
+            <mxPoint x="0" y="120" as="offset" />
+            <Array as="points">
+              <mxPoint x="190.0" y="729.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="incident_id (UQ)" style="edgeStyle=none;html=1;rounded=0;startArrow=ERmandOne;endArrow=ERzeroToOne;startFill=0;endFill=0;startSize=12;endSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" edge="1" parent="1" source="incident" target="expert_assignment">
+          <mxGeometry relative="1" as="geometry" x="0">
+            <mxPoint x="0" y="0" as="offset" />
+            <Array as="points">
+              <mxPoint x="970.0" y="620" />
+              <mxPoint x="580.0" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="assignment_id" style="edgeStyle=none;html=1;rounded=0;startArrow=ERmandOne;endArrow=ERzeroToOne;startFill=0;endFill=0;startSize=12;endSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" edge="1" parent="1" source="expert_assignment" target="webrtc_session">
+          <mxGeometry relative="1" as="geometry" x="0">
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="session_id" style="edgeStyle=none;html=1;rounded=0;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=12;endSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3053097345132743;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" edge="1" parent="1" source="webrtc_session" target="annotation">
+          <mxGeometry relative="1" as="geometry" x="0">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="session_id (UQ)" style="edgeStyle=none;html=1;rounded=0;startArrow=ERmandOne;endArrow=ERzeroToOne;startFill=0;endFill=0;startSize=12;endSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=11;" edge="1" parent="1" source="webrtc_session" target="protocol">
+          <mxGeometry relative="1" as="geometry" x="0">
+            <mxPoint x="0" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
